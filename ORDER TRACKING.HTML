@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - Bubble & Waffle</title>
+    <link rel="stylesheet" href="ORDER TRACKING.CSS">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <img src="IMAGES/Logo.png" alt="Bubble & Waffle Logo">
+        <nav>
+            <a href="HOMEPAGE.html">Homepage</a>
+            <a href="CONTACT US.html">Contact Us</a>
+            <a href="LOGIN.php">Login</a>
+        </nav>
+    </header>
+    
+    <div class="tracking-container">
+        <h1>ONLINE ORDER TRACKING</h1>
+        <p>Please enter your order number:</p>
+        <input type="text" id="order-number" placeholder="Enter Order Number">
+        <button onclick="trackOrder()">ENTER</button>
+
+        <div id="order-status" class="hidden">
+            <h2>Your order is on its way!</h2>
+            <div class="map-container">
+                <div id="order-map" style="width: 100%; height: 400px;"></div>
+            </div>
+            <h3>Your Order</h3>
+            <ul id="order-items">
+                <!-- Order items will be displayed here -->
+            </ul>
+            <p>Your order is currently being delivered. If you need assistance, please contact customer support.</p>
+        </div>
+    </div>
+    
+    <script>
+        let map;
+        let orderMarker;
+
+        function initMap() {
+            const initialLocation = { lat: 51.5074, lng: -0.1278 }; // Default: London, UK
+
+            map = new google.maps.Map(document.getElementById("order-map"), {
+                center: initialLocation,
+                zoom: 12
+            });
+
+            orderMarker = new google.maps.Marker({
+                position: initialLocation,
+                map: map,
+                title: "Order Location"
+            });
+
+            updateOrderLocation();
+        }
+
+        function updateOrderLocation() {
+            // Simulating real-time tracking (Replace with actual delivery tracking API)
+            setInterval(() => {
+                const newLat = orderMarker.getPosition().lat() + (Math.random() - 0.5) * 0.01;
+                const newLng = orderMarker.getPosition().lng() + (Math.random() - 0.5) * 0.01;
+
+                const newPosition = { lat: newLat, lng: newLng };
+                orderMarker.setPosition(newPosition);
+                map.setCenter(newPosition);
+            }, 5000); // Updates location every 5 seconds
+        }
+
+        function trackOrder() {
+            const orderInput = document.getElementById("order-number").value.trim();
+            const orderStatus = document.getElementById("order-status");
+
+            if (orderInput !== "") {
+                orderStatus.classList.remove("hidden");
+                initMap(); // Initialize map when tracking starts
+            } else {
+                alert("Please enter a valid order number.");
+                orderStatus.classList.add("hidden");
+            }
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 Bubble & Waffle. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Styles for the overall body  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a0c5f8;
+    color: #000;
+}
+/* Header styles with logo and navigation bars */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #a0c5f8;
+}
+
+.header img {
+    height: 130px; 
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+/* Centering the logo in the header section */
+.header .center-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+}
+/* search bar styling using input field */
+.header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.header .search-bar input {
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Layout styling */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+/* Main heading  */
+.hero h1 {
+    font-size: 36px;
+    color: #3a3a3a;
+}
+/* Paragraph */
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+/* contact details format */
+.contact-details {
+    font-size: 16px;
+    margin: 20px 0;
+}
+/* Information format */
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+/* shop time selection format */
+.shop-times {
+    flex: 1;
+    margin-right: 20px;
+}
+/* shop times heading style  */
+.shop-times h2 {
+    font-size: 30px;
+}
+/* shop times in a list */
+.shop-times ul {
+    padding-left: 0;
+    list-style-type: none; 
+    margin: 0;
+}
+
+.shop-times li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* Map layout using heading */
+.map-container {
+    flex: 1;
+    max-width: 800px;
+    height: 500px; 
+    margin: 20px auto; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center; 
+    background: white;
+    padding: 20px;
+}
+
+.map-container h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+ /* Styles for the iframe in the map container  */
+.map-container iframe {
+    width: 100%; 
+    height: 100%; 
+    border: 0; 
+    border-radius: 10px; 
+}
+/* Review form in a heading, label and input fields or text areas */
+.review-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.review-form h2 {
+    color: #2b78e4;
+}
+
+.review-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.review-form input, 
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* button style for the review section */
+.review-form button {
+    padding: 10px 15px;
+    background-color: #2b78e4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* review button hoovering effect */
+.review-form button:hover {
+    background-color: #1a5bb8;
+}
+/* styling for contact us area. */
+.contact-us {
+    color: #2b78e4;
+}

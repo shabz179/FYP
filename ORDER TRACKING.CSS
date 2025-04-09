@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #a0c5f8;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Header styling */
+header {
+    background-color: #a0c5f8;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo styling */
+header img {
+    height: 130px;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main section styling */
+main {
+    padding: 2rem;
+}
+
+/* Page title */
+h1 {
+    color: #f1c232;
+    margin-bottom: 1rem;
+}
+
+/* Tracking form container */
+.tracking-container {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 80%;
+    padding: 0.7rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Track Order button */
+.track-btn {
+    padding: 0.7rem 1.5rem;
+    background-color: #2b78e4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.track-btn:hover {
+    background-color: #1d5bbf;
+}
+
+/* Order status box */
+.order-status {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2b78e4;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #a0c5f8;
+    color: white;
+    margin-top: 2rem;
+}

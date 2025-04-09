@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the website -->
+    <title>Your Cart</title>
+    <!-- CSS Design of the website -->
+    <link rel="stylesheet" href="CART.CSS">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Logo -->
+            <img src="IMAGES/Logo.png" alt="Bubble & Waffle Logo">
+        </div>
+        <h1>Your Cart</h1>
+    </header>
+    <!-- The selection of desserts will show up here -->
+    <main>
+        <div id="cart-items"></div>
+        <h2>Total: <span id="total-price">£0.00</span></h2>
+        <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        <button id="clear-cart-button">Clear Cart</button>
+    </main>
+    <!-- A footer that has a copyright information. -->
+    <footer>
+        <p>&copy; 2025 Bubble & Waffle. All rights reserved.</p>
+    </footer>
+<!-- Products get added to the cart will be displayed here. -->
+    <script src="CART.JS"></script>
+</body>
+</html>
